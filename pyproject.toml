@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 requires = [ "setuptools>=61", "setuptools-scm>=8" ]
 
 [project]
-name = "hls4ml"
+name = "myhls4ml"
 description = "Machine learning in FPGAs using HLS"
 readme = "README.md"
 license = { text = "Apache-2.0" }
