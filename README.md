@@ -23,7 +23,7 @@
 
 ## Tests
 
-> Tested by running dense neural implementations with and without configuration and ensuring outputs in simulation are the same.
+> Tested by running dense neural implementations with and without configuration on jet tagging dataset and ensuring simulation outputs are identical.
 
 
 <p align="center">
