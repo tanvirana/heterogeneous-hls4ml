@@ -2,6 +2,9 @@ import re
 from generate_add_table_1d import generate_add_table
 from generate_mul_table_1d import generate_mul_table
 import math
+import os
+
+script_dir = os.path.dirname(os.path.abspath(__file__))  # directory of the current script
 
 def build_ram_add_tables_h(
         add_tables_width, 
@@ -76,7 +79,8 @@ ap_uint<{}>* ram_add_tables<{},{},{},{}>() {{
            add_tables_width[i]
            )
 
-    with open("test_ram_add_tables.h", "w") as file:
+    ram_add_tables_filepath = os.path.join(script_dir, "ram_add_tables.h")
+    with open(ram_add_tables_filepath, "w") as file:
         file.write(includes + fallback + template_instances)
 
 def build_ram_mul_tables_h(
@@ -154,7 +158,8 @@ ap_uint<{}>* ram_mul_tables<{},{},{},{},{}>() {{
            mul_tables_width1[i], mul_tables_width2[i]
            )
 
-    with open("test_ram_mul_tables.h", "w") as file:
+    ram_mul_tables_filepath = os.path.join(script_dir, "ram_mul_tables.h")
+    with open(ram_mul_tables_filepath, "w") as file:
         file.write(includes + fallback + template_instances)
 
 def extract_struct_blocks(code):
@@ -378,7 +383,9 @@ def get_accum_t_type(struct_body):
             return match.group(1)
     return None
 
-with open("../parameters.h", "r") as file:
+parameter_filepath = os.path.join(script_dir, "../parameters.h")
+
+with open(parameter_filepath, "r") as file:
     parameter_file = file.read()
 
 layer_name, config_names, config_string = extract_struct_blocks(parameter_file)
@@ -406,11 +413,12 @@ for idx in ram_add_idx:
     add_tables_ram_partition_factor.append(get_ram_partition_factor_muls(config_string[idx]))
 
 
-with open("../myproject.cpp", "r") as file:
+project_filepath = os.path.join(script_dir, "../myproject.cpp")
+with open(project_filepath, "r") as file:
     project_file = file.read()
 
-
-with open("../defines.h", "r") as file:
+defines_filepath = os.path.join(script_dir, "../defines.h")
+with open(defines_filepath, "r") as file:
     defines_file = file.read()
 
 mul_tables_width1 = []
