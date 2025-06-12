@@ -2,6 +2,7 @@
 
 > Add prototype code for configurable heterogeneous resource implementations of dense neural network layers in hls4ml. 
 >
+> Package renamed to myhls4ml for local installation and comparison with base package. \
 > Create an MLP (only dense layers and activations) as per the standard workflow. \
 > After ```.compile``` configuration can be done. \
 > See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. \
