@@ -2,12 +2,12 @@
 
 > Add prototype code for configurable heterogeneous resource implementations of dense neural network layers in hls4ml. 
 >
-1. Import myhls4ml - name is changed for local installation and comparison with base package. \
-2. Create an MLP (only dense layers and activations) as per the standard workflow. \
-3. After ```.compile``` configuration can be done. \
-4. See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. \
-5. Change configuration parameters for dense layers only in parameters.h. \
-6. Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py```. \
+1. Import myhls4ml - name is changed for local installation and comparison with base package. 
+2. Create an MLP (only dense layers and activations) as per the standard workflow. 
+3. After ```.compile``` configuration can be done. 
+4. See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. 
+5. Change configuration parameters for dense layers only in parameters.h. 
+6. Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py```. 
 7. Continue as normal with ```.build```.
 >
 # Updated Files
@@ -19,7 +19,7 @@
 
 ## Type of change
 
-- [X] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [X] Breaking change - nnet::product::mult has different function template widths in configuration templates. As a temporary fix for dense layers, this line in the configuration template has been commented out
 - [X] A new research paper code implementation
 
 ## Tests
