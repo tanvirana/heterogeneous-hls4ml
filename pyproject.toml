@@ -60,11 +60,11 @@ optional-dependencies.testing = [
   "torch",
 ]
 urls.Homepage = "https://fastmachinelearning.org/hls4ml"
-scripts.hls4ml = "hls4ml.cli:main"
-entry-points.pytest_randomly.random_seeder = "hls4ml:reseed"
+scripts.myhls4ml = "myhls4ml.cli:main"
+entry-points.pytest_randomly.random_seeder = "myhls4ml:reseed"
 
 [tool.setuptools]
-packages = [ "hls4ml" ]
+packages = [ "myhls4ml" ]
 include-package-data = true
 
 [tool.setuptools_scm]
@@ -80,7 +80,7 @@ git_describe_command = [
   "v*",
   "--first-parent",
 ]
-write_to = "hls4ml/_version.py"
+write_to = "myhls4ml/_version.py"
 
 [tool.black]
 line-length = 125
@@ -96,5 +96,5 @@ ignore = [
   "docs/**",
   ".pre-commit-config.yaml",
   "Jenkinsfile",
-  "hls4ml/_version.py",
+  "myhls4ml/_version.py",
 ]
