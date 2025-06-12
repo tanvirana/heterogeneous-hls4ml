@@ -2,19 +2,20 @@
 
 > Add prototype code for configurable heterogeneous resource implementations of dense neural network layers in hls4ml. 
 >
-> Instructions:
-> Create an MLP (only dense layers and activations) as per the standard workflow. 
-> After ```.compile``` configuration can be done.
-> See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters.
-> Change configuration parameters for dense layers only in parameters.h.
-> Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py```.
+> Instructions:\
+> Create an MLP (only dense layers and activations) as per the standard workflow. \
+> After ```.compile``` configuration can be done. \
+> See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. \
+> Change configuration parameters for dense layers only in parameters.h. \
+> Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py```. \
 > Continue as normal with ```.build```.
 >
-> -  myhls4ml/templates/vivado/nnet_utils/nnet_dense.h
-> - myhls4ml/templates/vivado/nnet_utils/nnet_dense_latency.h
-> - myhls4ml/templates/vivado/nnet_utils/nnet_mult.h
-> - myhls4ml/templates/vivado/ram_table_utils
-> - myhls4ml/writer/vivado_writer.py
+# Updated Files
+-  myhls4ml/templates/vivado/nnet_utils/nnet_dense.h
+- myhls4ml/templates/vivado/nnet_utils/nnet_dense_latency.h
+- myhls4ml/templates/vivado/nnet_utils/nnet_mult.h
+- myhls4ml/templates/vivado/ram_table_utils
+- myhls4ml/writer/vivado_writer.py
 
 ## Type of change
 
