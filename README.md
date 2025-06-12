@@ -1,3 +1,26 @@
+# Description of Experimental Changes
+
+> Add prototype code for configurable heterogeneous resource implementations of dense neural network layers in hls4ml. 
+> Create an MLP (only dense layers and activations) as per the standard workflow. 
+> After ```.compile``` configuration can be done. See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. Change these for dense layers only in parameters.h.
+> Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py``` and build.
+>
+> -  myhls4ml/templates/vivado/nnet_utils/nnet_dense.h
+> - myhls4ml/templates/vivado/nnet_utils/nnet_dense_latency.h
+> - myhls4ml/templates/vivado/nnet_utils/nnet_mult.h
+> - myhls4ml/templates/vivado/ram_table_utils
+> - myhls4ml/writer/vivado_writer.py
+
+## Type of change
+
+- [X] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [X] A new research paper code implementation
+
+## Tests
+
+> Tested by running dense neural implementations with and without configuration and ensuring outputs in simulation are the same.
+
+
 <p align="center">
    <img src="https://github.com/fastmachinelearning/fastmachinelearning.github.io/raw/master/images/hls4ml_logo.svg" alt="hls4ml" width="400"/>
 </p>
