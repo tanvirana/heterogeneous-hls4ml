@@ -2,13 +2,13 @@
 
 > Add prototype code for configurable heterogeneous resource implementations of dense neural network layers in hls4ml. 
 >
-> Package renamed to myhls4ml for local installation and comparison with base package. \
-> Create an MLP (only dense layers and activations) as per the standard workflow. \
-> After ```.compile``` configuration can be done. \
-> See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. \
-> Change configuration parameters for dense layers only in parameters.h. \
-> Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py```. \
-> Continue as normal with ```.build```.
+1. Import myhls4ml - name is changed for local installation and comparison with base package. \
+2. Create an MLP (only dense layers and activations) as per the standard workflow. \
+3. After ```.compile``` configuration can be done. \
+4. See myhls4ml/templates/vivado/nnet_utils/nnet_dense.h for configurable parameters. \
+5. Change configuration parameters for dense layers only in parameters.h. \
+6. Then ```python [hls4ml_prj_dir]/firmware/ram_table_utils/ram_table_config.py```. \
+7. Continue as normal with ```.build```.
 >
 # Updated Files
 -  myhls4ml/templates/vivado/nnet_utils/nnet_dense.h
